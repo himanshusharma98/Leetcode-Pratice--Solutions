@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var minSwaps = function (nums) {
+function minSwaps(nums) {
     const n = nums.length;
     let ones = 0;
     for (let i = 0; i < n; i++) {
@@ -40,4 +40,4 @@ var minSwaps = function (nums) {
         right--;
     }
     return minSwaps === Infinity ? 0 : minSwaps;
-};
+}
