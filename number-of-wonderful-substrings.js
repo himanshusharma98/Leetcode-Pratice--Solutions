@@ -2,7 +2,7 @@
  * @param {string} word
  * @return {number}
  */
-var wonderfulSubstrings = function(word) {
+var wonderfulSubstrings = function (word) {
     const count = new Map();
     count.set(0, 1); // Start with the empty prefix case
 
