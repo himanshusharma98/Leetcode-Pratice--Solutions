@@ -2,7 +2,7 @@
  * @param {Object|Array} obj
  * @return {Object|Array}
  */
-var compactObject = function(obj) {
+var compactObject = function (obj) {
     // Check if the input is an object or array
     if (Array.isArray(obj)) {
         // Process each item in the array
