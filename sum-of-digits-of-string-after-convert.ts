@@ -15,4 +15,4 @@ function getLucky(s: string, k: number): number {
     }
 
     return parseInt(num);
-};
+}
