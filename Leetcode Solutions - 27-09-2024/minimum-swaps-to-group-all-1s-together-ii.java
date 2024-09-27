@@ -1,4 +1,5 @@
 import java.util.*;
+
 class Solution {
     public int minSwaps(int[] nums) {
         int n = nums.length;
@@ -6,7 +7,7 @@ class Solution {
         int windowSize = Arrays.stream(nums).sum();
 
         int slide1s = 0;
-        for(int i = 0; i < windowSize; i++){
+        for (int i = 0; i < windowSize; i++) {
             slide1s += nums[i];
         }
         int max1s = slide1s;
@@ -24,6 +25,5 @@ class Solution {
 
         return windowSize - max1s; // Minimum swaps
 
-        
     }
 }
