@@ -1,7 +1,7 @@
 class MyCalendar {
     private bookings: Array<[number, number]> = [];
 
-    constructor() {}
+    constructor() { }
 
     public book(start: number, end: number): boolean {
         for (const [s, e] of this.bookings) {

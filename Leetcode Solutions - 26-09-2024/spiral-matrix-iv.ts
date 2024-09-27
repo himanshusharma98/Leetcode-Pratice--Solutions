@@ -2,21 +2,21 @@ class ListNodes {
     val: number
     next: ListNodes | null
     constructor(val?: number, next?: ListNodes | null) {
-        this.val = (val===undefined ? 0 : val)
-        this.next = (next===undefined ? null : next)
+        this.val = (val === undefined ? 0 : val)
+        this.next = (next === undefined ? null : next)
     }
- }
- 
+}
+
 
 function spiralMatrix(m: number, n: number, head: ListNodes | null): number[][] {
-    const matrix: number[][] = Array.from({length: m}, () => Array(n).fill(-1))
+    const matrix: number[][] = Array.from({ length: m }, () => Array(n).fill(-1))
 
     let top = 0, bottom = m - 1, left = 0, right = n - 1
 
     let current = head
 
-    while(current !== null && top <= bottom && left <= right) {
-        for(let i = left; i <= right && current !== null; i++){
+    while (current !== null && top <= bottom && left <= right) {
+        for (let i = left; i <= right && current !== null; i++) {
             matrix[top][i] = current.val
             current = current.next
         }
@@ -41,7 +41,7 @@ function spiralMatrix(m: number, n: number, head: ListNodes | null): number[][] 
             matrix[i][left] = current.val;
             current = current.next;
         }
-        left++; 
+        left++;
     }
 
     return matrix
