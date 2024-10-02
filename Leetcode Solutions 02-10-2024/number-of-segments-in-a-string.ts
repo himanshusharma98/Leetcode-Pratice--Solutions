@@ -1,4 +1,4 @@
 function countSegments(s: string): number {
 
-    return  s.split(' ').filter((str)=>str!="").length
+    return s.split(' ').filter((str) => str != "").length
 };
