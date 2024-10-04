@@ -1,6 +1,11 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 class Solution {
     public String minInteger(String num, int k) {
-        //pqs stores the location of each digit.
+        // pqs stores the location of each digit.
         List<Queue<Integer>> pqs = new ArrayList<>();
         for (int i = 0; i <= 9; ++i) {
             pqs.add(new LinkedList<>());
@@ -19,8 +24,9 @@ class Solution {
                 if (pqs.get(digit).size() != 0) {
                     // yes, there is a occurrence of digit at pos
                     Integer pos = pqs.get(digit).peek();
-					// Since few numbers already shifted to left, this `pos` might be outdated.
-                    // we try to find how many number already got shifted that were to the left of pos.
+                    // Since few numbers already shifted to left, this `pos` might be outdated.
+                    // we try to find how many number already got shifted that were to the left of
+                    // pos.
                     int shift = seg.getCountLessThan(pos);
                     // (pos - shift) is number of steps to make digit move from pos to i.
                     if (pos - shift <= k) {
@@ -69,7 +75,8 @@ class Solution {
         }
 
         private int getUtil(int ql, int qr, int l, int r, int node) {
-            if (qr < l || ql > r) return 0;
+            if (qr < l || ql > r)
+                return 0;
             if (ql <= l && qr >= r) {
                 return nodes[node];
             }

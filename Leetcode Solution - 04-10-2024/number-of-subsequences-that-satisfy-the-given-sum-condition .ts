@@ -1,5 +1,5 @@
 function numSubseq(nums: number[], target: number): number {
-    nums.sort((a, b) => a - b); 
+    nums.sort((a, b) => a - b);
 
     const mod = 1e9 + 7;
     const n = nums.length;
@@ -13,12 +13,12 @@ function numSubseq(nums: number[], target: number): number {
 
     let left = 0, right = n - 1;
     while (left <= right) {
-        
+
         if (nums[left] + nums[right] <= target) {
             ans = (ans + pow2[right - left]) % mod;
             left++;
         }
-        
+
         else {
             right--;
         }
