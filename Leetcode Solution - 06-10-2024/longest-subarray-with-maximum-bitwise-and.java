@@ -13,8 +13,7 @@ class Solution {
         for (int i = mi; i < nums.length; i++) {
             if (nums[i] == max) {
                 length += 1;
-            }
-            else {
+            } else {
                 maxLength = Math.max(maxLength, length);
                 length = 0;
             }

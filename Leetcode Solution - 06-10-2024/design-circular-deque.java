@@ -4,10 +4,10 @@ class MyCircularDeque {
 
     public MyCircularDeque(int k) {
         v = new int[k];
-        Arrays.fill(v, -1); 
+        Arrays.fill(v, -1);
         front = 0;
         back = 0;
-        size = 0; 
+        size = 0;
         capacity = k;
     }
 
@@ -16,15 +16,11 @@ class MyCircularDeque {
             return false;
         }
 
-        
         if (front == 0) {
-            front = capacity - 1; 
+            front = capacity - 1;
         } else {
-            front--; 
+            front--;
         }
-
-        
-        
 
         v[front] = value;
         size++;
@@ -38,14 +34,11 @@ class MyCircularDeque {
 
         v[back] = value;
 
-        
         if (back == capacity - 1) {
-            back = 0; 
+            back = 0;
         } else {
-            back++; 
+            back++;
         }
-
-        
 
         size++;
         return true;
@@ -58,15 +51,11 @@ class MyCircularDeque {
 
         v[front] = -1;
 
-        
         if (front == capacity - 1) {
-            front = 0; 
+            front = 0;
         } else {
-            front++; 
+            front++;
         }
-
-        
-        
 
         size--;
         return true;
@@ -78,9 +67,9 @@ class MyCircularDeque {
         }
 
         if (back == 0) {
-            back = capacity - 1; 
+            back = capacity - 1;
         } else {
-            back--; 
+            back--;
         }
         v[back] = -1;
 
@@ -100,9 +89,9 @@ class MyCircularDeque {
             return -1;
         }
         if (back == 0) {
-            return v[capacity - 1]; 
+            return v[capacity - 1];
         } else {
-            return v[back - 1]; 
+            return v[back - 1];
         }
     }
 
