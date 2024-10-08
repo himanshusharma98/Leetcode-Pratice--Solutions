@@ -1,4 +1,4 @@
-class Solution {
+class Solution  {
     public boolean isPrefixString(String s, String[] words) {
         StringBuilder builder = new StringBuilder();
 
