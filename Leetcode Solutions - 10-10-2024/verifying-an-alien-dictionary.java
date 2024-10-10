@@ -16,11 +16,11 @@ class Solution {
                     return false;
 
                 if (words[i].charAt(j) != words[i + 1].charAt(j)) {
-                    
+
                     if (orderMap.get(words[i].charAt(j)) > orderMap.get(words[i + 1].charAt(j))) {
                         return false;
                     } else {
-                    
+
                         break;
                     }
                 }
