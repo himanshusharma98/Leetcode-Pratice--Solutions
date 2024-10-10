@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class Solution {
     public String largestTimeFromDigits(int[] arr) {
         String res = "";

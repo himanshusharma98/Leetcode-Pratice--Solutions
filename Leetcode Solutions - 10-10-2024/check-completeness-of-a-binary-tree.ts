@@ -1,3 +1,9 @@
+interface TreeNode {
+    val: number;
+    left: TreeNode | null;
+    right: TreeNode | null;
+}
+
 function isCompleteTree(root: TreeNode | null): boolean {
     let queue = [root];
     let shouldHaveChild = true;
