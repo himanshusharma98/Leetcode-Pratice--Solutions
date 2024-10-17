@@ -1,4 +1,5 @@
 import java.util.Arrays;
+
 class Solution {
     public int strangePrinter(String s) {
         int[][] dp = new int[101][101];
