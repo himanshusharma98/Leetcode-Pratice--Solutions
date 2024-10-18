@@ -1,4 +1,4 @@
-var nextBeautifulNumber = function (n) {
+var nextBeautifulNumber = function (n)  {
     while (!isBalancedNumber(++n));
     function isBalancedNumber(num) {
         let counts = Array(10).fill(0);

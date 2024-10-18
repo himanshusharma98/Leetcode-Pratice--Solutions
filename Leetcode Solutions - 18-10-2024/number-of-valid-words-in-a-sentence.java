@@ -20,16 +20,18 @@ class Solution {
         if (word.length() == 1 && punctuation.indexOf(word.charAt(0)) > -1) {
             return true;
         }
-        
+
         if (letters.indexOf(word.charAt(0)) == -1 || word.charAt(0) == '-') {
             return false;
         }
 
-        if (letters.indexOf(word.charAt(word.length() - 1)) == -1 && punctuation.indexOf(word.charAt(word.length() - 1)) == -1) {
+        if (letters.indexOf(word.charAt(word.length() - 1)) == -1
+                && punctuation.indexOf(word.charAt(word.length() - 1)) == -1) {
             return false;
         }
-        
-        if (word.length() > 1 && word.charAt(word.length() - 2) == '-' && punctuation.indexOf(word.charAt(word.length() - 1)) > -1) {
+
+        if (word.length() > 1 && word.charAt(word.length() - 2) == '-'
+                && punctuation.indexOf(word.charAt(word.length() - 1)) > -1) {
             return false;
         }
 

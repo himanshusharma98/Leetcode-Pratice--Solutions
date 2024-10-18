@@ -1,6 +1,7 @@
 function platesBetweenCandles(s: string, queries: number[][]): number[] {
     const n = s.length;
 
+
     const leftCandle = new Array(n);
     let left = -1;
     for (let i = 0; i < n; i++) {
