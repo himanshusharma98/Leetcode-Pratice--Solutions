@@ -6,7 +6,7 @@ function maxProductPath(grid: number[][]): number {
     // dp array to store the max product and min product
     const dpMax: number[][] = Array.from({ length: m }, () => Array(n).fill(0));
     const dpMin: number[][] = Array.from({ length: m }, () => Array(n).fill(0));
-    
+
     dpMax[0][0] = grid[0][0];
     dpMin[0][0] = grid[0][0];
 
@@ -44,5 +44,5 @@ function maxProductPath(grid: number[][]): number {
     const result = dpMax[m - 1][n - 1];
     return result < 0 ? -1 : result % MOD;
 
-    
+
 };

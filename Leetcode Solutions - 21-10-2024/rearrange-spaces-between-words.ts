@@ -1,6 +1,6 @@
 function reorderSpaces(text: string): string {
     const words = text.trim().split(/\s+/);
-    
+
     const totalWhitespaces = (text.match(/\s/g) || []).length;
     if (words.length === 1 && totalWhitespaces) {
         let result = words[0];
