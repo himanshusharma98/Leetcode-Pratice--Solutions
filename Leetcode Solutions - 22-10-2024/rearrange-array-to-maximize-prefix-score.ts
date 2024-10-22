@@ -3,10 +3,10 @@ function maxScore(nums: number[]): number {
     let sum = 0;
     let positiveInts = 0;
 
-    for(let i = 0; i < nums.length; i++){
+    for (let i = 0; i < nums.length; i++) {
         sum += nums[i];
-        if(sum > 0) positiveInts++;
+        if (sum > 0) positiveInts++;
     }
     return positiveInts;
-    
+
 };
