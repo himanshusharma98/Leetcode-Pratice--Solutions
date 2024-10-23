@@ -13,8 +13,8 @@ function nearestPalindromic(n: string): string {
 
     let diff = BigInt(Number.MAX_SAFE_INTEGER);
     let res = 0n;
-    const nl = BigInt(n); 
-    
+    const nl = BigInt(n);
+
     for (let cand of possibilities) {
         if (cand === nl) continue;
         const currentDiff = cand > nl ? cand - nl : nl - cand;

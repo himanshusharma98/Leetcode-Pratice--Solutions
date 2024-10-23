@@ -11,7 +11,7 @@ class Solution {
         grid2[i][j] = 0;
         int row = grid1.length;
         int col = grid1[0].length;
-        for (int k = 0; k < 4; k++) {
+        for (int k = 0; k < 4; k++)  {
             int r = i + delr[k];
             int c = j + delc[k];
             if (r < row && r >= 0 && c < col && c >= 0 && grid2[r][c] == 1) {

@@ -1,18 +1,23 @@
-public class Solution {
-    public string FractionAddition(string expression) {
+public class Solution
+{
+    public string FractionAddition(string expression)
+    {
         List<int> numerators = new List<int>();
         List<int> denominators = new List<int>();
 
         int i = 0;
-        while (i < expression.Length) {
+        while (i < expression.Length)
+        {
             int sign = 1;
-            if (expression[i] == '-' || expression[i] == '+') {
+            if (expression[i] == '-' || expression[i] == '+')
+            {
                 sign = expression[i] == '-' ? -1 : 1;
                 i++;
             }
 
             int num = 0;
-            while (i < expression.Length && char.IsDigit(expression[i])) {
+            while (i < expression.Length && char.IsDigit(expression[i]))
+            {
                 num = num * 10 + (expression[i] - '0');
                 i++;
             }
@@ -20,7 +25,8 @@ public class Solution {
             i++; // skip the '/'
 
             int denom = 0;
-            while (i < expression.Length && char.IsDigit(expression[i])) {
+            while (i < expression.Length && char.IsDigit(expression[i]))
+            {
                 denom = denom * 10 + (expression[i] - '0');
                 i++;
             }
@@ -30,12 +36,14 @@ public class Solution {
         }
 
         int commonDenominator = 1;
-        foreach (int denom in denominators) {
+        foreach (int denom in denominators)
+        {
             commonDenominator = lcm(commonDenominator, denom);
         }
 
         int totalNumerator = 0;
-        for (int j = 0; j < numerators.Count; j++) {
+        for (int j = 0; j < numerators.Count; j++)
+        {
             totalNumerator += numerators[j] * (commonDenominator / denominators[j]);
         }
 
@@ -43,11 +51,13 @@ public class Solution {
         return (totalNumerator / gcdValue) + "/" + (commonDenominator / gcdValue);
     }
 
-    private int gcd(int a, int b) {
+    private int gcd(int a, int b)
+    {
         return b == 0 ? a : gcd(b, a % b);
     }
 
-    private int lcm(int a, int b) {
+    private int lcm(int a, int b)
+    {
         return a / gcd(a, b) * b;
     }
 }
