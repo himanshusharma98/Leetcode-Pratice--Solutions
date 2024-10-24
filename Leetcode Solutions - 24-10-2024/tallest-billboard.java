@@ -1,17 +1,23 @@
+import java.util.HashMap;
+import java.util.Map;
+
 class Solution {
     public int tallestBillboard(int[] rods) {
         Map<String, Integer> map = new HashMap<>();
         int sum = 0;
-        for(int rod : rods){
+        for (int rod : rods) {
             sum += rod;
         }
         return helper(rods, 0, 0, sum, map);
     }
-    private int helper(int[] rods, int index, int diff, int sum, Map<String, Integer> map){
-        if(index == rods.length) return (diff == 0) ? 0 : Integer.MIN_VALUE;
+
+    private int helper(int[] rods, int index, int diff, int sum, Map<String, Integer> map) {
+        if (index == rods.length)
+            return (diff == 0) ? 0 : Integer.MIN_VALUE;
         String key = index + "+" + diff;
 
-        if(map.containsKey(key)) return map.get(key);
+        if (map.containsKey(key))
+            return map.get(key);
 
         int exclude = helper(rods, index + 1, diff, sum, map);
 

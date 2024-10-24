@@ -38,20 +38,20 @@ function spellchecker(wordlist: string[], queries: string[]): string[] {
   const result: string[] = [];
   for (let i = 0; i < queries.length; i++) {
     const currentQuery = queries[i];
-    
+
     if (wordlistSet.has(currentQuery)) {
       result.push(currentQuery);
       continue;
     }
 
-    
+
     if (wordlistInsensitiveSet.has(currentQuery.toLowerCase())) {
       const insensitive = wordlist.find((word) => word.toLowerCase() === currentQuery.toLowerCase());
       insensitive && result.push(insensitive);
       continue;
     }
 
-    
+
     result.push(findVowel(wordlist, currentQuery));
   }
   return result;
