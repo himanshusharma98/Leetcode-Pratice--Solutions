@@ -39,7 +39,7 @@ function minAreaFreeRect(points: number[][]): number {
                         diagonal1[1],
                         diagonal2[1]
                     )
-                    ans = Math.min(ans, area)
+                    ans = Math.min(ans, area ?? Infinity)
                 }
             }
         }
