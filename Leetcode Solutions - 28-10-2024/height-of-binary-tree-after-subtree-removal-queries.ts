@@ -31,8 +31,8 @@ function treeQueries(root: TreeNode | null, queries: number[]): number[] {
     const maxr: number[] = new Array(n).fill(0);
 
     for (let i = 1; i < n; i++) {
-        maxl[i] = Math.max(maxl[i-1], heights[i-1]);
-        maxr[n-i-1] = Math.max(maxr[n-i], heights[n-i]);
+        maxl[i] = Math.max(maxl[i - 1], heights[i - 1]);
+        maxr[n - i - 1] = Math.max(maxr[n - i], heights[n - i]);
     }
 
     const ret: number[] = [];
