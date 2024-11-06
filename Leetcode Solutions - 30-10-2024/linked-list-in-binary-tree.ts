@@ -35,7 +35,8 @@ class TreeNode {
     this.left = null;
     this.right = null;
   }
-}class ListNode {
+}
+class ListNode {
   val: number;
   next: ListNode | null;
 
